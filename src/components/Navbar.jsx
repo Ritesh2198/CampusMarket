@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setSearchQuery } from "../slices/productSlice";
+import { setUser,setToken} from "../slices/authSlice";
 import logo from "../assets/logo.jpg"
 
 const Navbar = () => {
@@ -23,6 +24,7 @@ const Navbar = () => {
         localStorage.removeItem("token"); 
         localStorage.removeItem("user");
         dispatch(setUser(null));
+    
         dispatch(setToken(null));
         
         toast.success("Logged out successfully!");
