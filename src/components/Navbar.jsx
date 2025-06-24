@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { setSearchQuery } from "../slices/productSlice";
 import { setUser,setToken} from "../slices/authSlice";
 import logo from "../assets/logo.jpg"
+import {toast} from "react-hot-toast";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
