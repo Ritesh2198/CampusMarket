@@ -13,7 +13,7 @@ const Home = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/api/v1/product/getAllProducts`);
+                const res = await axios.get(`https://market-backend-6.onrender.com/api/v1/product/getAllProducts`);
                 setProducts(res.data.products);
                 setAllProducts(res.data.products);
                 setLoading(false);

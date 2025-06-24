@@ -42,7 +42,7 @@ const Sell = () => {
         console.log("Form Data before sending:", Object.fromEntries(formDataToSend.entries()));
         console.log("FORM",formData);
         try {
-            await axios.post("http://localhost:3000/api/v1/product/createProduct", formDataToSend, {
+            await axios.post("https://market-backend-6.onrender.com/api/v1/product/createProduct", formDataToSend, {
                 headers: { "Content-Type": "multipart/form-data",
                     Authorization : `Bearer ${token}`
                 },

@@ -8,7 +8,7 @@ const SearchResults = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/products?search=${query}`)
+        axios.get(`https://market-backend-6.onrender.com/api/products?search=${query}`)
             .then(res => setProducts(res.data.products))
             .catch(err => console.log(err));
     }, [query]);

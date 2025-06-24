@@ -21,7 +21,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.post(`http://localhost:3000/api/v1/product/getProduct`,{id});
+                const res = await axios.post(`https://market-backend-6.onrender.com/api/v1/product/getProduct`,{id});
                 setProduct(res.data.product);
                 setLoading(false);
             } catch (err) {
