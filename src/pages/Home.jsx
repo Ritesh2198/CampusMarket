@@ -36,23 +36,6 @@ const Home = () => {
     
 
     return (
-        // <div className="container mx-auto p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        
-        //     <h1 className="text-2xl font-bold mb-4">Latest Products</h1>
-
-        //     {loading ? (
-        //         <p>Loading products...</p>
-        //     ) : products?.length > 0 ? (
-        //         <div className="grid grid-cols-4 gap-4">
-        //             {products.map(product => (
-        //                 <ProductCard key={product._id} product={product} />
-        //             ))}
-        //         </div>
-        //     ) : (
-        //         <p>No products available</p>
-        //     )}
-
-        // </div>
         <div className="container mx-auto p-4">
             <h1 className="text-2xl font-bold mb-4">Latest Products</h1>
 
