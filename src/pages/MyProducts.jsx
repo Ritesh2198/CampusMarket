@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const MyProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const userId = "67cad3eee8eccb9b39407d3c"; 
+    
+    
+    const userId = useSelector((state)=>state.user._id);
 
     useEffect(() => {
         const fetchProducts = async () => {
