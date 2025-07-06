@@ -11,7 +11,6 @@ const AdminProducts = () => {
         const fetchPendingProducts = async () => {
             try {
                 const res = await axios.get("https://market-backend-6.onrender.com/api/v1/product/getPendingProducts");
-                // const res = await axios.get("http://localhost:3000/api/v1/product/getPendingProducts");
                 setProducts(res.data.products);
             } catch (error) {
                 console.error("Error fetching pending products:", error);

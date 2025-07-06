@@ -5,7 +5,7 @@ import axios from "axios";
 const MyProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const userId = "67cad3eee8eccb9b39407d3c"; // Replace with actual user ID from auth
+    const userId = "67cad3eee8eccb9b39407d3c"; 
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -22,7 +22,7 @@ const MyProducts = () => {
     }, []);
 
     const handleDelete = async (productId) => {
-        //if (!window.confirm("Are you sure you want to delete this product?")) return;
+        
         
         try {
             await axios.post(`https://market-backend-6.onrender.com/api/v1/product/deleteProduct`,{productId});
