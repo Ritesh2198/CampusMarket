@@ -29,7 +29,6 @@ const Login = () => {
             localStorage.setItem("user", JSON.stringify(res.data.user))
             dispatch(setToken(res.data.token));
             dispatch(setUser(res.data.user));
-            console.log(res.data.user);
             toast.success("Login successful!");
             navigate("/");
           }
