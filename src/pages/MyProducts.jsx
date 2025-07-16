@@ -8,12 +8,13 @@ const MyProducts = () => {
     const [loading, setLoading] = useState(true);
     
     
-    const userId = useSelector((state)=>state.user._id);
+    const userId = useSelector((state)=>state.user?._id);
+
 
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchProducts = async() => {
             try {
-                const res =await axios.post("https://market-backend-6.onrender.com/api/v1/product/myProducts", { userId });
+                const res =await axios.post("https://market-backend-6.onrender.com/api/v1/product/myProducts", {userId});
                 setProducts(res.data.products);
             } catch (error) {
                 console.error("Error fetching products:", error);
@@ -24,7 +25,7 @@ const MyProducts = () => {
         fetchProducts();
     }, []);
 
-    const handleDelete = async (productId) => {
+    const handleDelete = async(productId) => {
         
         
         try {
